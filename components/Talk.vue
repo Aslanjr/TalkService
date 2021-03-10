@@ -148,7 +148,7 @@ export default {
       }
     },
     async getMessages(){
-      await fetch('http://localhost:4000/messages')
+      await fetch('https://talk-service-server.herokuapp.com/messages')
         .then(response => response.json())
         .then(item => {
           if(this.messages.length == item.length){
@@ -159,7 +159,7 @@ export default {
         });
     },
      getUsers(){
-       fetch('http://localhost:4000/users')
+       fetch('https://talk-service-server.herokuapp.com/users')
         .then(response => response.json())
         .then(item => this.users = item);
     }
