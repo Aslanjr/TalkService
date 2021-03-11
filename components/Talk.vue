@@ -25,10 +25,6 @@
                     <label for="name">Имя: </label>
                     <input type="text" class="form-control" ref="name">
                   </div>
-                  <!-- <div class="form-row col-lg-6">
-                    <label for="password">Пароль: </label>
-                    <input type="text" class="form-control" ref="pass">
-                  </div> -->
                 </div>
                 <div class="form-row col-lg-12 justify-content-center">
                   <button class="btn btn-info btn-lg" @click.prevent="auth">
@@ -61,7 +57,6 @@
 <script>
 
 import {mapState} from 'vuex'
-import axios from 'axios'
 
 
 export default {
@@ -109,10 +104,6 @@ export default {
         messageTo:`${this.selected}`,
         message:`${this.$refs.msg.value}`
       })
-      // .then(()=>{
-      //   this.getMessages();
-      //   this.getUsers();
-      // })
     },
     auth(){
       this.user.name = this.$refs.name.value; 
